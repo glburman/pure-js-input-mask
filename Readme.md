@@ -70,6 +70,7 @@ The Mask-name name (e.g. 'Telephone10')
 **mask**
 
 This is the mask displayed in the input. For example 
+
 ````
 (XXX) XXX-XXXX //for Telephone10
 ````
@@ -78,19 +79,23 @@ This is the mask displayed in the input. For example
 
 determines the allowed input pattern :
 
-\* designates an allowed input position
+````
+* designates an allowed input position
+````
+any other character is treated as a masked (non-input) position
 
-any other character is treated as a masked position
-
-example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
+````
+Telephone10 : (***) ***-****
+````
 
 **charset**
 
 RegEx definition of the characters allowed in the input
 
-example, Telephone10 : 0-9
-
-an Alphanumeric mask would be : 0-9a-zAz
+````
+example, Telephone10 charset is  "0-9"
+an Alphanumeric mask would be "0-9a-zAz"
+````
 
 **validator** (optional)
 
