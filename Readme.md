@@ -11,7 +11,7 @@ Tested in Chrome, Firefox and Edge.
 1. import the **MaskedInputs** class and instantiate it
 
    import MaskedInputs from "./maskedInputs";
-   const editState = {}; // contains current form data
+   const editState = {}; //current form data
    new MaskedInputs(editState);
 
 2. Add the **data-mask** attribute to each <input> to be masked
@@ -35,24 +35,24 @@ name
 mask
 
 > this is the mask displayed in the input
-    > for example (XXX) XXX-XXXX for Telephone10
+> for example (XXX) XXX-XXXX for Telephone10
 
 format
 
 > determines the allowed input pattern :
 >
-    > \* designates an allowed input position
-    > any other character is treated as a masked position
-    > example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
+> \* designates an allowed input position
+> any other character is treated as a masked position
+> example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
 
 charset
 
 > RegEx definition of the characters allowed in the input
-    > example, Telephone10 : 0-9
-    > an Alphanumeric mask would be : 0-9a-zAz
+> example, Telephone10 : 0-9
+> an Alphanumeric mask would be : 0-9a-zAz
 
 validator (optional)
 
 > a validating javascript function to be executed on each input.
-    > see the simple example with the definition of the defined 'YearMonthDay' mask
-    > a custom validation event can be fired from there
+> see the simple example with the definition of the defined 'YearMonthDay' mask
+> a custom validation event can be fired from there
