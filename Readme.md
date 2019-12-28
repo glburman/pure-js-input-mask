@@ -10,9 +10,9 @@ Tested in Chrome, Firefox and Edge.
 
 1. import the **MaskedInputs** class and instantiate it
 
-``` import MaskedInputs from "./maskedInputs";
-``` const editState = {}; // contains current form data
-``` new MaskedInputs(editState);
+`import MaskedInputs from "./maskedInputs";`
+`const editState = {}; // contains current form data`
+`new MaskedInputs(editState);`
 
 2.  Add the **data-mask** attribute to each <input> to be masked
 
@@ -56,4 +56,7 @@ validator (optional)
 > a validating javascript function to be executed on each input.
 > see the simple example with the definition of the defined 'YearMonthDay' mask
 > a custom validation event can be fired from there
-````
+
+```
+
+```
