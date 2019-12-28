@@ -10,19 +10,21 @@ Tested in Chrome, Firefox and Edge.
 
 1. import the **MaskedInputs** class and instantiate it
 
-    import MaskedInputs from "./maskedInputs";
-    const editState = {}; // contains current form data
-    new MaskedInputs(editState);
+   import MaskedInputs from "./maskedInputs";
 
-2.  Add the **data-mask** attribute to each <input> to be masked
+   const editState = {}; // contains current form data
 
-    > set the attribute value to any of the constants defined in **mask-definitions.js**
-    > add/modify named definitions as needed (see below)
-    > Example:
-    >
-    > >  <input name="Phone" id="Phone" class="form-control" type="tel" data-mask="Telephone10"/>
+   new MaskedInputs(editState);
 
-3.  Done
+2. Add the **data-mask** attribute to each <input> to be masked
+
+   > set the attribute value to any of the constants defined in **mask-definitions.js**
+   > add/modify named definitions as needed (see below)
+   > Example:
+   >
+   > >  <input name="Phone" id="Phone" class="form-control" type="tel" data-mask="Telephone10"/>
+
+3. Done
 
 ### Defining Masks
 
