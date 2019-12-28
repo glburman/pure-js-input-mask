@@ -1,4 +1,4 @@
-## Lightweight Pure JS (ES2015) Masked Input Editor
+## Lightweight Pure JS (ES2015) Masked Inputs
 
 I couldn't find an input masking module wasn't either library-sized or missing what I needed.
 
@@ -18,22 +18,24 @@ Exports a single class ('MaskedInputs') with 2 static methods:
 
 1. init
 
-```
+   Sets up key initial input values, masks and handlers.
+   
+   Parameter "formState" : initial form values in json
+
+```javascript
 MaskedInputs.init(formState)
 ```
-
-  sets up key initial input values, masks and handlers.
-  'formState' - initial form values in json
 
 2. maskInput
 
    Should not be called directly, let the handlers set up by MaskedInput.init do the work
+   
 
 ### How To
 
 1. import the **MaskedInputs** class
 
-```
+```javascript
 import MaskedInputs from "./maskedInputs";
 
 ```
@@ -41,50 +43,59 @@ import MaskedInputs from "./maskedInputs";
 2. Add the **data-mask** attribute to each input to be masked
 
    set the attribute value to any of the constants defined in **mask-definitions.js**
+   
    add/modify named definitions as needed (see below)
+   
    Example:
 
-```
+```javascript
    <input name="Phone" id="Phone" class="form-control" type="tel" data-mask="Telephone10"/>
 ```
 
 3. Initialize
 
-```
-  const editState = {} //current form data
-  const settings = {}  //defaults are normally fine
-  MaskedInputs.init(editState,settings)
+```javascript
+  const formState = {} //current form data as json
+  MaskedInputs.init(formState)
 ```
 
 ### Defining Masks
 
 Mask constants are defined in **mask-definitions.js** using the inlcuded MaskDefinition class with these properties:
 
-name
+**name**
 
-> the Constant name (e.g. 'Telephone10')
+The Mask-name name (e.g. 'Telephone10')
 
-mask
+**mask**
 
-> this is the mask displayed in the input
-> for example (XXX) XXX-XXXX for Telephone10
+This is the mask displayed in the input. For example 
+````
+(XXX) XXX-XXXX //for Telephone10
+````
 
-format
+**format**
 
-> determines the allowed input pattern :
->
-> \* designates an allowed input position
-> any other character is treated as a masked position
-> example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
+determines the allowed input pattern :
 
-charset
+\* designates an allowed input position
 
-> RegEx definition of the characters allowed in the input
-> example, Telephone10 : 0-9
-> an Alphanumeric mask would be : 0-9a-zAz
+any other character is treated as a masked position
 
-validator (optional)
+example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
 
-> a validating javascript function to be executed on each input.
-> see the simple example with the definition of the defined 'YearMonthDay' mask
-> a custom validation event can be fired from there
+**charset**
+
+RegEx definition of the characters allowed in the input
+
+example, Telephone10 : 0-9
+
+an Alphanumeric mask would be : 0-9a-zAz
+
+**validator** (optional)
+
+a validating javascript function to be executed on each input.
+
+see the simple example with the definition of the defined 'YearMonthDay' mask
+
+a custom validation event can be fired from there
