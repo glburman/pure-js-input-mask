@@ -8,6 +8,8 @@ Tested in Chrome, Firefox and Edge. I.E. 11 should be fine as well, let me know 
 
 ### Description
 
+The class MaskedInputs handles masking keystrokes, while mask definitions (of class MaskDefinition) are stored in a separate file for easy maintenance. Definitions are imported into the (your) form page and the form's masked inputs are then initialized using a static method on the MaskedInputs class. Data is kept in the input itself, formatted.
+
 **mask-definitions.js**
 
 Defines named inputs masks (e.g. 'Telephone10'). The file provded has definitions for a 10-digit Telephone number and for a MM/DD/YYYY date input (standard input, not a date picker).
@@ -31,7 +33,7 @@ MaskedInputs.init(formState)
    Should not be called directly, let the handlers set up by MaskedInput.init do the work
    
 
-### How To
+### Setup & Usage
 
 1. import the **MaskedInputs** class
 
@@ -94,7 +96,7 @@ RegEx definition of the characters allowed in the input
 
 ````
 example, Telephone10 charset is  "0-9"
-an Alphanumeric mask would be "0-9a-zAz"
+an Alphanumeric mask would be "0-9a-zA-Z"
 ````
 
 **validator** (optional)
