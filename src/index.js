@@ -1,3 +1,3 @@
 import MaskedInputs from "./maskedInputs";
-const editState = {}; // contains current form data
-new MaskedInputs(editState);
+const formState = {}; //  normally contains current form data
+MaskedInputs.init(formState);

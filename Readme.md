@@ -6,14 +6,33 @@ This is the result. Simple, small, flexible, works for me.
 
 Tested in Chrome, Firefox and Edge.
 
+### Description
+
+**mask-definitions.js**.
+Defined named inputs masks (e.g. 'Telephone10'). The file provded has definitions for a 10-digit Telephone number and for a MM/DD/YYYY date input (standard input, not a date picker).
+
+**maskedInputs.js**
+Exports a single class ('MaskedInputs') with 2 static methods:
+
+1. init
+
+```
+MaskedInputs.init(formState)
+```
+
+sets up key initial input values, masks and handlers.
+
+2. maskInput
+
+Should not be called directly, let the handlers set up by MaskedInput.init do the work
+
 ### How To
 
-1. import the **MaskedInputs** class and instantiate it
+1. import the **MaskedInputs** class
 
 ```
 import MaskedInputs from "./maskedInputs";
-const editState = {}; //current form data
-new MaskedInputs(editState);
+
 ```
 
 2. Add the **data-mask** attribute to each input to be masked
@@ -26,7 +45,13 @@ new MaskedInputs(editState);
    <input name="Phone" id="Phone" class="form-control" type="tel" data-mask="Telephone10"/>
 ```
 
-3. Run it
+3. Initialize
+
+```
+  const editState = {} //current form data
+  const settings = {}  //defaults are normally fine
+  MaskedInputs.init(editState,settings)
+```
 
 ### Defining Masks
 

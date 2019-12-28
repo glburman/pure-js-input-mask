@@ -1,24 +1,23 @@
 import MaskDefintions from "./mask-definitions";
 
 export default class MaskedInputs {
-  constructor(editState, settings = {}) {
-    this.settings = { ...settings };
-    this.editState = { ...editState };
-    this.settings.masks = {};
+  static init(formState) {
+    this.formState = { ...formState };
+    this.masks = {};
     document.querySelectorAll("[data-mask]").forEach(el => {
-      this.settings.masks[el.name] = {
+      this.masks[el.name] = {
         ...MaskDefintions.definitions[el.getAttribute("data-mask")]
       };
       el.addEventListener("keydown", k => {
         this.maskInput(el, k);
-        if (this.settings.masks[el.name].validator)
-          this.settings.masks[el.name].validator(el);
+        if (this.masks[el.name].validator) this.masks[el.name].validator(el);
       });
       this.maskInput(el);
     }, this);
   }
-  maskInput(el, ke) {
-    const maskdef = this.settings.masks[el.name];
+
+  static maskInput(el, ke) {
+    const maskdef = this.masks[el.name];
     if (el.value.length === 0) {
       el.value = maskdef.mask;
     }
