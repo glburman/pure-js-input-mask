@@ -13,6 +13,7 @@ Tested in Chrome, Firefox and Edge. I.E. 11 should be fine as well, let me know 
 Defines named inputs masks (e.g. 'Telephone10'). The file provded has definitions for a 10-digit Telephone number and for a MM/DD/YYYY date input (standard input, not a date picker).
 
 **maskedInputs.js**
+
 Exports a single class ('MaskedInputs') with 2 static methods:
 
 1. init
@@ -21,8 +22,8 @@ Exports a single class ('MaskedInputs') with 2 static methods:
 MaskedInputs.init(formState)
 ```
 
-    sets up key initial input values, masks and handlers.
-    'formState' - initial form values in json
+  sets up key initial input values, masks and handlers.
+  'formState' - initial form values in json
 
 2. maskInput
 
