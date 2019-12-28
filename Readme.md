@@ -16,7 +16,7 @@ const editState = {}; //current form data
 new MaskedInputs(editState);
 ```
 
-2. Add the **data-mask** attribute to each <input> to be masked
+2. Add the **data-mask** attribute to each input to be masked
 
    set the attribute value to any of the constants defined in **mask-definitions.js**
    add/modify named definitions as needed (see below)
