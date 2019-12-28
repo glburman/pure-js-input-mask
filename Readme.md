@@ -4,7 +4,7 @@ I couldn't find an input masking module wasn't either library-sized or missing w
 
 This is the result. Simple, small, flexible, works for me.
 
-Tested in Chrome, Firefox and Edge.
+Tested in Chrome, Firefox and Edge. I.E. 11 should be fine as well, let me know if you spot something.
 
 ### Description
 
@@ -21,10 +21,11 @@ MaskedInputs.init(formState)
 ```
 
     sets up key initial input values, masks and handlers.
+    'formState' - initial form values in json
 
 2. maskInput
 
-    Should not be called directly, let the handlers set up by MaskedInput.init do the work
+   Should not be called directly, let the handlers set up by MaskedInput.init do the work
 
 ### How To
 
