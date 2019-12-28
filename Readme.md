@@ -42,7 +42,9 @@ format
 > determines the allowed input pattern
 >
 > \* designates an allowed input position
-> any other character is treated as a masked position
+
+> any other character is treated as a masked position 
+
 > example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
 
 charset
