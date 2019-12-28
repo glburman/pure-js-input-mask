@@ -9,6 +9,7 @@ Tested in Chrome, Firefox and Edge. I.E. 11 should be fine as well, let me know 
 ### Description
 
 **mask-definitions.js**
+
 Defines named inputs masks (e.g. 'Telephone10'). The file provded has definitions for a 10-digit Telephone number and for a MM/DD/YYYY date input (standard input, not a date picker).
 
 **maskedInputs.js**
