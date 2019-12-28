@@ -41,16 +41,17 @@ format
 
 > determines the allowed input pattern :
 >
-> > \* designates an allowed input position
-> > any other character is treated as a masked position
-> > example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
+> \* designates an allowed input position
+
+> any other character is treated as a masked position
+> example for Telephone10 : (\*\*\*) \*\*\*-\*\*\*\*
 
 charset
 
 > RegEx definition of the characters allowed in the input
->
-> > example, Telephone10 : 0-9
-> > an Alphanumeric mask would be : 0-9a-zAz
+
+> example, Telephone10 : 0-9
+> an Alphanumeric mask would be : 0-9a-zAz
 
 validator (optional)
 
