@@ -8,8 +8,8 @@ Tested in Chrome, Firefox and Edge.
 
 ### Description
 
-**mask-definitions.js**.
-Defined named inputs masks (e.g. 'Telephone10'). The file provded has definitions for a 10-digit Telephone number and for a MM/DD/YYYY date input (standard input, not a date picker).
+**mask-definitions.js**
+Defines named inputs masks (e.g. 'Telephone10'). The file provded has definitions for a 10-digit Telephone number and for a MM/DD/YYYY date input (standard input, not a date picker).
 
 **maskedInputs.js**
 Exports a single class ('MaskedInputs') with 2 static methods:
@@ -20,11 +20,11 @@ Exports a single class ('MaskedInputs') with 2 static methods:
 MaskedInputs.init(formState)
 ```
 
-sets up key initial input values, masks and handlers.
+    sets up key initial input values, masks and handlers.
 
 2. maskInput
 
-Should not be called directly, let the handlers set up by MaskedInput.init do the work
+    Should not be called directly, let the handlers set up by MaskedInput.init do the work
 
 ### How To
 
